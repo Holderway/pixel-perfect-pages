@@ -1,8 +1,15 @@
+import appuntoLogo from "@/assets/appunto-logo.png";
+
 const HeroSection = () => {
   return (
     <section className="bg-background">
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center gap-10">
-        <div className="w-full rounded-2xl overflow-hidden shadow-lg">
+      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center gap-8">
+        <img
+          src={appuntoLogo}
+          alt="Appunto logo"
+          className="h-10 md:h-14 w-auto"
+        />
+        <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
           <video
             src="https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video_landing_Appunto.mp4"
             autoPlay
