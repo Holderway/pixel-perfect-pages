@@ -28,13 +28,17 @@ const HeroSection = () => {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="#precios"
+              href="https://appunto.com.co/onboarding"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity"
             >
               Prueba gratis 14 días
             </a>
             <a
-              href="#como-funciona"
+              href="https://appunto.com.co/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-border text-foreground px-6 py-3 rounded-full text-sm font-semibold text-center hover:bg-muted transition-colors"
             >
               Más información
