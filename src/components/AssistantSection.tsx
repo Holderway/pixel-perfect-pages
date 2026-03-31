@@ -1,10 +1,18 @@
-import { Bot, MessageCircle, Calendar, Clock } from "lucide-react";
+import { Bot, MessageCircle, Calendar, Clock, CalendarCheck, CheckCircle, MessageSquare, Users, CheckCheck } from "lucide-react";
 
 const stats = [
   { value: "+10.000", label: "Citas gestionadas", icon: Calendar },
   { value: "98%", label: "Tasa de respuesta", icon: MessageCircle },
   { value: "+500", label: "Negocios activos", icon: Bot },
   { value: "24/7", label: "Disponibilidad total", icon: Clock },
+];
+
+const features = [
+  { icon: CalendarCheck, text: "Agenda citas automáticamente" },
+  { icon: CheckCircle, text: "Confirma, reprograma o cancela" },
+  { icon: MessageSquare, text: "Respondea preguntas frecuentes" },
+  { icon: Users, text: "Atiende varios clientes al mismo tiempo" },
+  { icon: CheckCheck, text: "Nunca deja mensajes en visto" },
 ];
 
 const AssistantSection = () => {
@@ -18,6 +26,19 @@ const AssistantSection = () => {
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
           Atiende a tus clientes por WhatsApp como si fuera parte de tu equipo, pero trabaja 24/7 y nunca se cansa.
         </p>
+        <div className="mt-10 max-w-xl mx-auto">
+          <h3 className="text-sm md:text-base font-extrabold text-foreground uppercase tracking-wide mb-4">Qué hace:</h3>
+          <div className="space-y-3">
+            {features.map((f, i) => (
+              <div key={i} className="flex items-center gap-4 bg-accent rounded-2xl p-4 text-left">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-background flex items-center justify-center">
+                  <f.icon className="w-5 h-5 text-primary" />
+                </div>
+                <p className="text-foreground text-sm md:text-base font-medium">{f.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <div key={i} className="bg-accent rounded-xl p-6 text-center">
