@@ -1,4 +1,4 @@
-import { MessageCircleX, Clock, UserX } from "lucide-react";
+import { MessageCircleX, Clock, UserX, Smartphone, DollarSign } from "lucide-react";
 
 const problems = [
   {
@@ -15,6 +15,16 @@ const problems = [
     icon: UserX,
     bold: "Te preguntan siempre lo mismo:",
     rest: " precios, horarios, disponibilidad",
+  },
+  {
+    icon: Smartphone,
+    bold: "Estás más pendiente del celular",
+    rest: " que del servicio",
+  },
+  {
+    icon: DollarSign,
+    bold: "Pierdes dinero",
+    rest: " sin darte cuenta",
   },
 ];
 
