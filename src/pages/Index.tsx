@@ -9,10 +9,12 @@ import BenefitsSection from "@/components/BenefitsSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <WhatsAppFloat />
       <Navbar />
       <HeroSection />
       <ProblemSection />
