@@ -24,7 +24,7 @@ const HeroSection = () => {
             <span className="text-primary">Automatiza</span> la gestión de citas en tu negocio
           </h1>
           <p className="mt-4 text-muted-foreground text-base md:text-lg leading-relaxed">
-            Mientras tú cortas cabello o prestas tus servicios, nuestro asistente virtual responde mensajes, confirma citas y llena tu agenda. Sin perder clientes, sin esfuerzo.
+            Mientras tú cortas cabello o prestas tus servicios, nuestro asistente virtual <span className="font-bold">responde mensajes, confirma citas y llena tu agenda</span>. Sin perder clientes, sin esfuerzo.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <a
