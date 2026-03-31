@@ -1,3 +1,4 @@
+import { MessageCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -27,8 +28,12 @@ const faqs = [
     a: "¡Claro! Puedes personalizar los mensajes, horarios disponibles y servicios según tu negocio.",
   },
   {
-    q: "¿Funciona solo con WhatsApp?",
-    a: "Por ahora sí. WhatsApp es el canal más utilizado por los clientes en Latinoamérica para agendar citas.",
+    q: "¿Puedo probar antes de pagar?",
+    a: "Sí, puedes probar antes de pagar con una prueba de 14 días sin necesidad de vincular tarjeta.",
+  },
+  {
+    q: "¿Qué pasa si necesito ayuda?",
+    a: "Puedes escribir a nuestra línea de atención donde te estaremos orientando en las dudas que necesites.",
   },
 ];
 
@@ -52,6 +57,20 @@ const FAQSection = () => {
             </AccordionItem>
           ))}
         </Accordion>
+
+        {/* WhatsApp CTA */}
+        <div className="mt-10 text-center">
+          <p className="text-muted-foreground text-sm mb-4">¿Tienes otra pregunta?</p>
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 border border-primary rounded-full px-8 py-3 text-sm font-semibold text-foreground hover:bg-primary/5 transition-colors"
+          >
+            <MessageCircle className="w-5 h-5 text-foreground" />
+            Escríbenos por WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   );
