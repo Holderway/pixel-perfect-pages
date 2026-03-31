@@ -16,7 +16,7 @@ const AssistantSection = () => {
           <span className="text-primary">asistente virtual</span>
         </h2>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-          Atiende a tus clientes por WhatsApp como si fuera tu recepcionista de confianza, pero disponible las 24 horas, los 7 días de la semana. Agenda, confirma y recuerda citas.
+          Atiende a tus clientes por WhatsApp como si fuera parte de tu equipo, pero trabaja 24/7 y nunca se cansa.
         </p>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
