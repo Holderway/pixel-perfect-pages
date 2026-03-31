@@ -34,7 +34,7 @@ const Navbar = () => {
           <a href="#como-funciona" onClick={() => setOpen(false)}>Cómo funciona</a>
           <a href="#precios" onClick={() => setOpen(false)}>Precios</a>
           <a href="#faq" onClick={() => setOpen(false)}>FAQ</a>
-          <a href="#precios" className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-center font-semibold" onClick={() => setOpen(false)}>
+          <a href="https://appunto.com.co/onboarding" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-center font-semibold" onClick={() => setOpen(false)}>
             Prueba gratis 14 días
           </a>
         </div>
