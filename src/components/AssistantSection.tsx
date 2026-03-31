@@ -1,7 +1,7 @@
 import { Bot, MessageCircle, Calendar, Clock } from "lucide-react";
 
 const stats = [
-  { value: "+5,000", label: "Citas agendadas", icon: Calendar },
+  { value: "+10.000", label: "Citas gestionadas", icon: Calendar },
   { value: "98%", label: "Tasa de respuesta", icon: MessageCircle },
   { value: "+500", label: "Negocios activos", icon: Bot },
   { value: "24/7", label: "Disponibilidad total", icon: Clock },
