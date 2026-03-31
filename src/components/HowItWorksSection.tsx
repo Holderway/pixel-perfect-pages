@@ -2,22 +2,17 @@ const steps = [
   {
     num: "1",
     title: "El cliente escribe por WhatsApp",
-    desc: "Tu cliente te escribe como siempre, por WhatsApp, pidiendo una cita.",
+    desc: '"Hola, quiero agendar una cita"',
   },
   {
     num: "2",
-    title: "El asistente responde al instante",
-    desc: "Nuestro asistente virtual responde automáticamente, de forma natural y personalizada.",
+    title: "El asistente responde automáticamente",
+    desc: "Pregunta servicio, día y hora disponibles",
   },
   {
     num: "3",
     title: "Cita confirmada",
-    desc: "El cliente elige fecha y hora disponible. El asistente confirma la cita automáticamente.",
-  },
-  {
-    num: "4",
-    title: "Recordatorio automático",
-    desc: "Tu cliente recibe un recordatorio antes de su cita para que no se le olvide asistir.",
+    desc: "El cliente queda agendado sin que tú hagas nada",
   },
 ];
 
@@ -31,22 +26,23 @@ const HowItWorksSection = () => {
         <p className="mt-3 text-muted-foreground text-sm md:text-base">
           Es más simple de lo que te imaginas
         </p>
-        <div className="mt-12 space-y-6">
+        <div className="mt-12 space-y-6 max-w-md mx-auto">
           {steps.map((s) => (
             <div
               key={s.num}
-              className="flex items-start gap-5 bg-background rounded-xl p-5 text-left shadow-sm"
+              className="bg-background rounded-xl p-6 text-center shadow-sm"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+              <div className="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-lg mx-auto mb-4">
                 {s.num}
               </div>
-              <div>
-                <h3 className="font-bold text-foreground text-sm md:text-base">{s.title}</h3>
-                <p className="text-muted-foreground text-xs md:text-sm mt-1">{s.desc}</p>
-              </div>
+              <h3 className="font-bold text-foreground text-sm md:text-base">{s.title}</h3>
+              <p className="text-muted-foreground text-xs md:text-sm mt-1">{s.desc}</p>
             </div>
           ))}
         </div>
+        <p className="mt-10 text-foreground font-bold text-base md:text-lg">
+          Tú solo te enfocas en atender. El asistente se encarga del resto.
+        </p>
       </div>
     </section>
   );
