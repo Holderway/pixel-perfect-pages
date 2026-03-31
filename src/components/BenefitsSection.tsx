@@ -10,8 +10,11 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="bg-muted py-16 md:py-24">
+    <section className="bg-accent py-16 md:py-24">
       <div className="max-w-xl mx-auto px-4">
+        <h2 className="text-2xl md:text-4xl font-extrabold text-foreground text-center mb-10">
+          Lo que ganas <span className="text-primary">desde<br className="sm:hidden" /> el primer día</span>
+        </h2>
         <div className="space-y-4">
           {benefits.map((b, i) => (
             <div
