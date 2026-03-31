@@ -3,15 +3,18 @@ import { MessageCircleX, Clock, UserX } from "lucide-react";
 const problems = [
   {
     icon: MessageCircleX,
-    text: "Tus clientes te escriben por WhatsApp para agendar, pero no siempre puedes responder.",
+    bold: "Te escriben todo el día por WhatsApp para agendar",
+    rest: " mientras estás atendiendo clientes",
   },
   {
     icon: Clock,
-    text: "Te pierdes citas porque estás ocupado atendiendo y no ves los mensajes a tiempo.",
+    bold: "Pierdes citas",
+    rest: " porque no alcanzas a responder",
   },
   {
     icon: UserX,
-    text: "Pierdes clientes que se van con la competencia porque no les respondiste rápido.",
+    bold: "Te preguntan siempre lo mismo:",
+    rest: " precios, horarios, disponibilidad",
   },
 ];
 
