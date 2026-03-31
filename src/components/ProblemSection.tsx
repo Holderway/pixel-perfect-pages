@@ -51,7 +51,7 @@ const ProblemSection = () => {
           ))}
         </div>
         <div className="mt-8 bg-background rounded-xl p-5 shadow-sm">
-          <p className="text-muted-foreground text-sm italic">
+          <p className="text-muted-foreground text-sm italic font-bold">
             Cada mensaje no respondido a tiempo es una cita perdida y dinero que se va.
           </p>
         </div>
