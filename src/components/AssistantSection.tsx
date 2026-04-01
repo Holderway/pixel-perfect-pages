@@ -10,8 +10,8 @@ const stats = [
 const features = [
   { icon: CalendarCheck, text: "Agenda citas automáticamente" },
   { icon: CheckCircle, text: "Confirma, reprograma o cancela" },
-  { icon: MessageSquare, text: "Respondea preguntas frecuentes" },
-  { icon: Users, text: "Atiende varios clientes al mismo tiempo" },
+  { icon: MessageSquare, text: "Ofrece los servicios y muestra disponibilidades" },
+  { icon: Users, text: "Agenda citas de manera simultánea" },
   { icon: CheckCheck, text: "Nunca deja mensajes en visto" },
 ];
 
