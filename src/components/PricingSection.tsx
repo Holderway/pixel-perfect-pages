@@ -6,7 +6,7 @@ const features = [
   "Agenda automática sin errores",
   "Recordatorios que reducen inasistencias",
   "Panel para ver y controlar tus citas",
-  "Soporte humano cuando lo necesites",
+  "Soporte disponible",
   "Mejoras constantes sin pagar más",
   "Citas ilimitadas (sin costos ocultos)",
 ];
