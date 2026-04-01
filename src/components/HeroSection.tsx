@@ -16,6 +16,7 @@ const HeroSection = () => {
             muted
             loop
             playsInline
+            preload="auto"
             className="w-full object-cover"
           />
         </div>
