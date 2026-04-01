@@ -24,8 +24,12 @@ const faqs = [
     a: "Sí. Appunto está diseñado para barberías, salones de belleza, spas, consultorios y cualquier negocio que maneje citas.",
   },
   {
-    q: "¿Puedo personalizar los mensajes y el flujo de atención?",
-    a: "¡Claro! Puedes personalizar los mensajes, horarios disponibles y servicios según tu negocio.",
+    q: "¿Tengo que cambiar mi WhatsApp o mi número?",
+    a: "No, Appunto utiliza su propio número donde los clientes escriben directamente y agendan sus citas sin complicaciones.",
+  },
+  {
+    q: "¿En cuánto tiempo recupero la inversión?",
+    a: "Dependiendo del servicio recuperas la inversión con un solo cliente o en menos de un día.",
   },
   {
     q: "¿Puedo probar antes de pagar?",
