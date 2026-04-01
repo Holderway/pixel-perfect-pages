@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="#" className="text-xl font-extrabold text-foreground tracking-tight">
-          appunt<span className="text-primary">o</span>
+        <a href="#">
+          <img src={appuntoLogo} alt="Appunto logo" className="h-8 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
           <a href="#problema" className="hover:text-foreground transition-colors">Problema</a>
