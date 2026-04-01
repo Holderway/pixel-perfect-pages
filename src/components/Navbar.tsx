@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import appuntoLogo from "@/assets/appunto-logo.png";
+import appuntoLogo from "@/assets/appunto-logo-dark.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
