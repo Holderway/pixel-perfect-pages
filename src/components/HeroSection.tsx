@@ -12,24 +12,32 @@ const HeroSection = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Start muted to satisfy autoplay policy, then try to play
-    video.muted = true;
-    video.play().catch(() => {});
+    // Wait a few seconds to buffer, then play with sound
+    video.muted = false;
+    video.volume = 1;
 
-    // When enough data is buffered, keep playing smoothly
-    const handleWaiting = () => {
-      // Video is buffering - just wait, browser will resume
+    const playWithSound = () => {
+      video.muted = false;
+      video.play().catch(() => {
+        // Browser blocked unmuted autoplay - fallback to muted
+        video.muted = true;
+        setIsMuted(true);
+        video.play().catch(() => {});
+      });
     };
 
+    // Give 5 seconds to buffer before playing
+    const bufferTimer = setTimeout(() => {
+      playWithSound();
+    }, 5000);
+
+    // If video is ready sooner (canplaythrough), also try
     const handleCanPlayThrough = () => {
-      // Enough data buffered for smooth playback
-      if (video.paused) {
-        video.play().catch(() => {});
-      }
+      clearTimeout(bufferTimer);
+      playWithSound();
     };
 
     const handleStalled = () => {
-      // If stalled, attempt to nudge playback
       setTimeout(() => {
         if (video.paused || video.readyState < 3) {
           video.play().catch(() => {});
@@ -37,12 +45,11 @@ const HeroSection = () => {
       }, 1000);
     };
 
-    video.addEventListener("waiting", handleWaiting);
     video.addEventListener("canplaythrough", handleCanPlayThrough);
     video.addEventListener("stalled", handleStalled);
 
     return () => {
-      video.removeEventListener("waiting", handleWaiting);
+      clearTimeout(bufferTimer);
       video.removeEventListener("canplaythrough", handleCanPlayThrough);
       video.removeEventListener("stalled", handleStalled);
     };
