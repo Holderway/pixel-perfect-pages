@@ -74,8 +74,6 @@ const HeroSection = () => {
           <video
             ref={videoRef}
             src={VIDEO_URL}
-            autoPlay
-            muted
             loop
             playsInline
             preload="auto"
