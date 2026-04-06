@@ -1,6 +1,60 @@
+import { useRef, useEffect, useState } from "react";
 import appuntoLogo from "@/assets/appunto-logo.png";
+import { Volume2, VolumeX } from "lucide-react";
+
+const VIDEO_URL = "https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video+landing+Appunto_1_1.mp4";
 
 const HeroSection = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Start muted to satisfy autoplay policy, then try to play
+    video.muted = true;
+    video.play().catch(() => {});
+
+    // When enough data is buffered, keep playing smoothly
+    const handleWaiting = () => {
+      // Video is buffering - just wait, browser will resume
+    };
+
+    const handleCanPlayThrough = () => {
+      // Enough data buffered for smooth playback
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    };
+
+    const handleStalled = () => {
+      // If stalled, attempt to nudge playback
+      setTimeout(() => {
+        if (video.paused || video.readyState < 3) {
+          video.play().catch(() => {});
+        }
+      }, 1000);
+    };
+
+    video.addEventListener("waiting", handleWaiting);
+    video.addEventListener("canplaythrough", handleCanPlayThrough);
+    video.addEventListener("stalled", handleStalled);
+
+    return () => {
+      video.removeEventListener("waiting", handleWaiting);
+      video.removeEventListener("canplaythrough", handleCanPlayThrough);
+      video.removeEventListener("stalled", handleStalled);
+    };
+  }, []);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
   return (
     <section className="bg-background">
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center gap-8">
@@ -9,15 +63,24 @@ const HeroSection = () => {
           alt="Appunto logo"
           className="h-10 md:h-14 w-auto"
         />
-        <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
           <video
-            src="https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video+landing+Appunto_1_1.mp4"
+            ref={videoRef}
+            src={VIDEO_URL}
             autoPlay
+            muted
             loop
             playsInline
             preload="auto"
             className="w-full object-cover"
           />
+          <button
+            onClick={toggleMute}
+            className="absolute bottom-3 right-3 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition-colors"
+            aria-label={isMuted ? "Activar sonido" : "Silenciar"}
+          >
+            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+          </button>
         </div>
         <div className="text-center max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-extrabold text-foreground leading-tight">
