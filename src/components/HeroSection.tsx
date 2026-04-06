@@ -13,7 +13,6 @@ const HeroSection = () => {
           <video
             src="https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video+landing+Appunto_1_1.mp4"
             autoPlay
-            muted
             loop
             playsInline
             preload="auto"
