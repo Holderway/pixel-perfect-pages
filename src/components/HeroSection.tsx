@@ -11,7 +11,7 @@ const HeroSection = () => {
         />
         <div className="w-full max-w-2xl rounded-2xl overflow-hidden shadow-lg">
           <video
-            src="https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video_landing_Appunto.mp4"
+            src="https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video+landing+Appunto_1_1.mp4"
             autoPlay
             muted
             loop
