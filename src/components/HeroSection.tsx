@@ -6,7 +6,7 @@ const VIDEO_URL = "https://holderway.s3.us-east-2.amazonaws.com/Appunto/Video+la
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
